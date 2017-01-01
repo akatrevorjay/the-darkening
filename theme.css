@@ -115,7 +115,7 @@ div.CodeMirror.cm-s-zenburn,
  */
 div[aria-label="YouTube Video Player in Fullscreen"] video
 {
-    filter: none !important
+    filter: none !important;
 }
 
 /* Images and interactive things that we also want to darken slightly except on hover.
@@ -161,7 +161,11 @@ embed,
 *[type*="application/x-shockwave-flash"]:hover,
 *[type*="application/x-silverlight"]
 {
-    filter: invert(1) hue-rotate(180deg) brightness(100%) !important
+	filter:
+		invert(1)
+		hue-rotate(180deg)
+		brightness(100%)
+		!important;
 }
 
 
@@ -194,4 +198,3 @@ samp,
         monospace
         !important;
 }
-
