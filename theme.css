@@ -18,6 +18,9 @@
  *
  */
 
+/* Sylish actually requires this. */
+/* i really want this to be global */
+
 
 /* Requires included tampermonkey JS script to set class on html elements if they are i?framed or not (one liner).
  * This is used to *not* re-filter them.
