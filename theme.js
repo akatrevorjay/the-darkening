@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name        The Darkening
 // @description Stylish theme to darken all sites that doesn't suck. All syntax highlighting is kept while being dead simple.
-// @url         https://github.com/akatrevorjay/the-darkening
+// @namespace   https://github.com/akatrevorjay/the-darkening
+// @url         https://github.com/akatrevorjay/the-darkening/raw/master/theme.js
 // @version     1
 // @include     *
 // @grant       none
