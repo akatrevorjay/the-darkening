@@ -168,6 +168,14 @@ embed,
 		!important;
 }
 
+/* Re-reverse background images */
+[style*="background-image"]
+{
+	backdrop-filter:
+		invert(1)
+		hue-rotate(180deg)
+		!important;
+}
 
 /* Enforce a decent code font
  */
