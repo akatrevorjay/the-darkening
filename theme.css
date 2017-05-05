@@ -25,7 +25,7 @@
 /* Requires included tampermonkey JS script to set class on html elements if they are i?framed or not (one liner).
  * This is used to *not* re-filter them.
  */
-html:not(.framed)
+html:not(.the-darkening-framed)
 {
     filter:
         hue-rotate(180deg)

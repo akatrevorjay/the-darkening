@@ -12,5 +12,5 @@
     'use strict';
 
     // Apply CSS class name according to window frame status
-    document.documentElement.className += (window.self == window.top ? " top" : " framed");
+    document.documentElement.className += (window.self == window.top ? " the-darkening-top" : " the-darkening-framed");
 })();
