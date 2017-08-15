@@ -21,11 +21,31 @@
 /* Sylish actually requires this. */
 /* i really want this to be global */
 
-
-/* Requires included tampermonkey JS script to set class on html elements if they are i?framed or not (one liner).
+/*
+ * Set class on html elements if they are i?framed or not (one liner).
  * This is used to *not* re-filter them.
+ *
+ * Requires either Stylus (fork of Stylish) or the included tampermonkey JS script.
  */
+/* Tampermonkey JS script */
 html:not(.the-darkening-framed)
+{
+    filter:
+        hue-rotate(180deg)
+        invert(1)
+        /*
+        opacity(0.9)
+        brightness(80%)
+        contrast(90%)
+        */
+        !important;
+
+    /* Some sites actually do set this!? fuck it, this is what we have come to. */
+    background: black !important;
+    background-color: black !important;
+}
+/* Stylus (fork of Shylus) has the above functionality built-in. */
+html:not([stylus-iframe])
 {
     filter:
         hue-rotate(180deg)
@@ -56,6 +76,7 @@ body
 {
     background: transparent !important;
     background-color: transparent !important;
+    color: #000 !important;
 }
 
 
@@ -113,7 +134,8 @@ div.CodeMirror.cm-s-zenburn,
 
 /* Youtube fullscreen shouldn't be reversed. It lives in it's own, very special space.
  */
-div[aria-label="YouTube Video Player in Fullscreen"] video
+div[aria-label="YouTube Video Player in Fullscreen"] video,
+div.vjs-fullscreen video
 {
     filter: none !important;
 }
