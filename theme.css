@@ -191,7 +191,8 @@ embed,
 }
 
 /* Re-reverse background images */
-[style*="background-image"]
+/* eBay for instance has a background image on body that is not happy about this. Avoid body bgs. */
+body [style*="background-image"]
 {
 	backdrop-filter:
 		invert(1)
