@@ -11,7 +11,7 @@ Stylus/Stylish theme.
 The script is not required, but recommended. It's a tiny one liner used to realize if we're in an iframe or not.
 Without the script active, iframes will not be darkened.
 
-* Style (`theme.css`): https://userstyles.org/styles/137141/the-darkening
+* Style (`theme.user.css`): https://userstyles.org/styles/137141/the-darkening
 
 * When using Stylish, optional script to also blacken iframes: (`theme.js`): https://greasyfork.org/en/scripts/26202-the-darkening
   Also, you may want to look into switching to the fork, it's quite better already and doesn't have the same politics getting
