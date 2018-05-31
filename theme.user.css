@@ -22,7 +22,7 @@
  *
  */
 
-/* Sylish actually requires this. */
+/* Sylish actually requires this: */
 /* i really want this to be global */
 
 html {
@@ -37,6 +37,7 @@ html {
  *
  * Requires either Stylus (fork of Stylish) or the included tampermonkey JS script.
  */
+
 /* Tampermonkey JS script */
 html body:not(.the-darkening-framed)
 {
@@ -54,6 +55,7 @@ html body:not(.the-darkening-framed)
     background: black !important;
     background-color: black !important;
 }
+
 /* Stylus (fork of Shylus) has the above functionality built-in. */
 html body:not([stylus-iframe])
 {
@@ -74,8 +76,18 @@ html body:not([stylus-iframe])
 
 
 /*
- * Background color removal
+ * Background adaptation
  */
+
+/* Re-reverse background images */
+/* eBay for instance has a background image on body that is not happy about this. Avoid body bgs. */
+body [style*="background-image"]
+{
+	backdrop-filter:
+		invert(1)
+		hue-rotate(180deg)
+		!important;
+}
 
 /* Chrome new tab for instance sets body seperately, fyi */
 body
@@ -89,15 +101,14 @@ body
     color: #000 !important;
 }
 
-
 /*
  * Firefox bare image
  */
-
 body > img.transparent {
     top: 80px;
     margin-top: 0px;
 }
+
 
 /*
  * Exclusions (via another inverse lol)
@@ -152,6 +163,16 @@ div.CodeMirror.cm-s-zenburn,
     background-color: transparent !important;
 }
 
+/* We cannot set a bg here at all.. */
+/* userstyles.org preview is actually a div for reasons I guess. */
+div#preview_image_div
+{
+    filter:
+        invert(1)
+        hue-rotate(180deg)
+        !important;
+}
+
 /* Youtube fullscreen shouldn't be reversed. It lives in it's own, very special space.
  */
 div[aria-label="YouTube Video Player in Fullscreen"] video,
@@ -175,10 +196,7 @@ video,
 embed[flashvars],
 embed,
 *[type*="application/x-shockwave-flash"],
-*[type*="application/x-silverlight"],
-
-/* userstyles.org preview is actually a div for reasons */
-div#preview_image_div
+*[type*="application/x-silverlight"]
 
 {
     filter:
@@ -207,26 +225,13 @@ video:hover,
 embed[flashvars]:hover,
 embed,
 *[type*="application/x-shockwave-flash"]:hover,
-*[type*="application/x-silverlight"],
-
-/* userstyles.org preview is actually a div for reasons */
-div#preview_image_div
+*[type*="application/x-silverlight"]
 
 {
 	filter:
 		invert(1)
 		hue-rotate(180deg)
 		brightness(100%)
-		!important;
-}
-
-/* Re-reverse background images */
-/* eBay for instance has a background image on body that is not happy about this. Avoid body bgs. */
-body [style*="background-image"]
-{
-	backdrop-filter:
-		invert(1)
-		hue-rotate(180deg)
 		!important;
 }
 
