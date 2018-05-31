@@ -21,6 +21,12 @@
 /* Sylish actually requires this. */
 /* i really want this to be global */
 
+html {
+	/* ugh */
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
 /*
  * Set class on html elements if they are i?framed or not (one liner).
  * This is used to *not* re-filter them.
@@ -28,7 +34,7 @@
  * Requires either Stylus (fork of Stylish) or the included tampermonkey JS script.
  */
 /* Tampermonkey JS script */
-body:not(.the-darkening-framed)
+html body:not(.the-darkening-framed)
 {
     filter:
         hue-rotate(180deg)
@@ -45,7 +51,7 @@ body:not(.the-darkening-framed)
     background-color: black !important;
 }
 /* Stylus (fork of Shylus) has the above functionality built-in. */
-body:not([stylus-iframe])
+html body:not([stylus-iframe])
 {
     filter:
         hue-rotate(180deg)
@@ -131,6 +137,7 @@ div.CodeMirror.cm-s-zenburn,
 /* Google avatar */
 /*a [title^="Google Account: "],*/
 .gbii, .gbip
+
 {
     filter:
         invert(1)
@@ -155,6 +162,7 @@ div.vjs-fullscreen video
 /* Image */
 img,
 svg,
+canvas,
 
 /* Video */
 video,
@@ -164,6 +172,7 @@ embed[flashvars],
 embed,
 *[type*="application/x-shockwave-flash"],
 *[type*="application/x-silverlight"]
+
 {
     filter:
         invert(1)
