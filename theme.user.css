@@ -16,6 +16,10 @@
  * Until a better fork exists or they stop smoking crack, here's an example exclusion regexp if you wish to do so:
  *   (ht|f)tps?://(?!([^/]*?\.)?(plus.google|mail.google.com|maps.google|google.com/maps|google.hu/maps|inbox.google)).*
  *
+ * Here's mine:
+ *
+ *   (ht|f)tps?://(?!([^/]*?\.)?(localhost|duckduckgo\.com|facebook\.com|messenger\.com|mozilla\.org|ebay\.com|(grafana)\.(services|local)\.disqus\.net|wikipedia\.org|astralapp\.com|spotify\.com|tidal\.com|github\.com|reddit\.com|youtube\.com|(mail|inbox|drive)\.google\.com|massdrop\.com)).*
+ *
  */
 
 /* Sylish actually requires this. */
@@ -171,7 +175,10 @@ video,
 embed[flashvars],
 embed,
 *[type*="application/x-shockwave-flash"],
-*[type*="application/x-silverlight"]
+*[type*="application/x-silverlight"],
+
+/* userstyles.org preview is actually a div for reasons */
+div#preview_image_div
 
 {
     filter:
@@ -191,6 +198,7 @@ embed,
 /* Image */
 img:hover,
 svg:hover,
+canvas,
 
 /* Video */
 video:hover,
@@ -199,7 +207,11 @@ video:hover,
 embed[flashvars]:hover,
 embed,
 *[type*="application/x-shockwave-flash"]:hover,
-*[type*="application/x-silverlight"]
+*[type*="application/x-silverlight"],
+
+/* userstyles.org preview is actually a div for reasons */
+div#preview_image_div
+
 {
 	filter:
 		invert(1)
