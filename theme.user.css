@@ -28,7 +28,7 @@
  * Requires either Stylus (fork of Stylish) or the included tampermonkey JS script.
  */
 /* Tampermonkey JS script */
-html:not(.the-darkening-framed)
+body:not(.the-darkening-framed)
 {
     filter:
         hue-rotate(180deg)
@@ -45,7 +45,7 @@ html:not(.the-darkening-framed)
     background-color: black !important;
 }
 /* Stylus (fork of Shylus) has the above functionality built-in. */
-html:not([stylus-iframe])
+body:not([stylus-iframe])
 {
     filter:
         hue-rotate(180deg)
@@ -79,6 +79,15 @@ body
     color: #000 !important;
 }
 
+
+/*
+ * Firefox bare image
+ */
+
+body > img.transparent {
+    top: 80px;
+    margin-top: 0px;
+}
 
 /*
  * Exclusions (via another inverse lol)
@@ -216,6 +225,8 @@ samp,
 .blob-code-inner
 {
     font-family:
+        "Fura Code Nerd Font",
+        "PragmataPro Nerd Font",
         "Input Mono",
         "Monoid",
         "Monoid Halftight",
