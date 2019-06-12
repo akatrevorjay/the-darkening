@@ -26,7 +26,7 @@
 /* i really want this to be global */
 
 html {
-	/* ugh */
+    /* ugh */
     background: transparent !important;
     background-color: transparent !important;
 }
@@ -83,10 +83,10 @@ html body:not([stylus-iframe])
 /* eBay for instance has a background image on body that is not happy about this. Avoid body bgs. */
 body [style*="background-image"]
 {
-	backdrop-filter:
-		invert(1)
-		hue-rotate(180deg)
-		!important;
+    backdrop-filter:
+        invert(1)
+        hue-rotate(180deg)
+        !important;
 }
 
 /* Chrome new tab for instance sets body seperately, fyi */
@@ -99,14 +99,6 @@ body
     background: transparent !important;
     background-color: transparent !important;
     color: #000 !important;
-}
-
-/*
- * Firefox bare image
- */
-body > img.transparent {
-    top: 80px;
-    margin-top: 0px;
 }
 
 
@@ -228,11 +220,11 @@ embed,
 *[type*="application/x-silverlight"]
 
 {
-	filter:
-		invert(1)
-		hue-rotate(180deg)
-		brightness(100%)
-		!important;
+    filter:
+        invert(1)
+        hue-rotate(180deg)
+        brightness(100%)
+        !important;
 }
 
 /* Enforce a decent code font
