@@ -158,6 +158,11 @@ div.CodeMirror.cm-s-zenburn,
 /* We cannot set a bg here at all.. */
 /* userstyles.org preview is actually a div for reasons I guess. */
 div#preview_image_div
+/* Slack (non-expanded) images. They wrap an `img` inside of a `figure` with a `background-image`,
+ * Which is certainly something that I'd love to hear the story on. */
+, figure[style*="background-image"]
+/* Slack profile icons */
+, a[style*="background-image"]
 {
     filter:
         invert(1)
