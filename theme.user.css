@@ -5,6 +5,9 @@
  * The Darkening
  * Global black style that doesn't suck. All syntax highlighting is kept while being dead simple.
  *
+ * To make iframes nicely dark as well, this style is meant to be used with:
+ *   tampermonkey script (one liner to mark iframes): https://greasyfork.org/scripts/26202-the-darkening
+ *
  * @github: https://github.com/akatrevorjay/the-darkening
  *
  * --
