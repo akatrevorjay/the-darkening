@@ -166,6 +166,8 @@ div#preview_image_div
 , figure[style*="background-image"]
 /* Slack profile icons */
 , a[style*="background-image"]
+/* Amazon image gallery view uses divs with background images */
+, div[style*="background-image"]
 {
     filter:
         invert(1)
