@@ -167,7 +167,8 @@ div#preview_image_div
 /* Slack profile icons */
 , a[style*="background-image"]
 /* Amazon image gallery view uses divs with background images */
-, div[style*="background-image"]
+/* BREAKs confluence */
+/* , div[style*="background-image"] */
 {
     filter:
         invert(1)
