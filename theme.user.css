@@ -18,7 +18,7 @@
  *
  * Here's mine:
  *
- *   (ht|f)tps?://(?!([^/]*?\.)?(localhost|duckduckgo\.com|facebook\.com|messenger\.com|mozilla\.org|ebay\.com|(grafana)\.(services|local)\.disqus\.net|wikipedia\.org|astralapp\.com|spotify\.com|tidal\.com|github\.com|reddit\.com|youtube\.com|(mail|inbox|drive)\.google\.com|massdrop\.com)).*
+ *   (ht|f)tps?://(?!([^/]*?\.)?(localhost|duckduckgo\.com|facebook\.com|messenger\.com|mozilla\.org|ebay\.com|(grafana)\.(services|local)\.disqus\.net|wikipedia\.org|astralapp\.com|spotify\.com|tidal\.com|github\.com|reddit\.com|youtube\.com|(mail|inbox|drive)\.google\.com|google\.com/maps|massdrop\.com)).*
  *
  */
 
