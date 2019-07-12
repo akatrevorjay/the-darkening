@@ -5,8 +5,8 @@
  * The Darkening
  * Global black style that doesn't suck. All syntax highlighting is kept while being dead simple.
  *
- * To make iframes nicely dark as well, this style is meant to be used with:
- *   tampermonkey script (one liner to mark iframes): https://greasyfork.org/scripts/26202-the-darkening
+ * To make iframes nicely dark as well, this style is meant to be used with Stylus, and you must
+ *   go into it's options and enable "Expose iframes via HTML[stylus-iframe]".
  *
  * @github: https://github.com/akatrevorjay/the-darkening
  *
@@ -34,33 +34,9 @@ html {
     background-color: transparent !important;
 }
 
-/*
- * Set class on html elements if they are i?framed or not (one liner).
- * This is used to *not* re-filter them.
- *
- * Requires either Stylus (fork of Stylish) or the included tampermonkey JS script.
- */
-
-/* Tampermonkey JS script */
-html body:not(.the-darkening-framed)
-{
-    filter:
-        hue-rotate(180deg)
-        invert(1)
-        /*
-        opacity(0.9)
-        brightness(80%)
-        contrast(90%)
-        */
-        !important;
-
-    /* Some sites actually do set this!? fuck it, this is what we have come to. */
-    background: black !important;
-    background-color: black !important;
-}
-
-/* Stylus (fork of Shylus) has the above functionality built-in. */
-html body:not([stylus-iframe])
+/* Stylus (fork of Shylus) has an option to set the `stylus-iframe` attribute on iframes.
+ * This is used to *not* re-filter them. */
+html:not([stylus-iframe]) body
 {
     filter:
         hue-rotate(180deg)
